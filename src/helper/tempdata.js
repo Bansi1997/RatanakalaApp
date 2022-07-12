@@ -1,6 +1,7 @@
 export const tempShapeslist = [
   {
     code: 'R',
+    isSelected: false,
     name: 'round',
     label: 'ROUND',
     synonyms: 'BR,RB,RD,RBC,ROUND BRILLIANT,ROUND,RO,RND,R',
@@ -8,6 +9,7 @@ export const tempShapeslist = [
   },
   {
     code: 'E',
+    isSelected: false,
     name: 'emerald',
     label: 'EMERALD',
     synonyms: 'EM,EC,EMERALD,EMRALD,EMRL,FBD',
@@ -274,6 +276,14 @@ export const tempSearch_color = [
     order: 7,
     synonyms: 'J,J+,J-',
   },
+  {
+    code: 7,
+    isSelected: false,
+    label: 'M',
+    name: 'M',
+    order: 7,
+    synonyms: 'M,M+,M-',
+  },
 ];
 export const tempClarities_list = [
   {
@@ -413,5 +423,115 @@ export const tempCut_list = [
     name: 'FR',
     order: 5,
     synonyms: 'FR',
+  },
+];
+export const tempSym_list = [
+  {
+    code: 1,
+    isSelected: false,
+    label: 'EX',
+    name: 'EX',
+    order: 1,
+    synonyms: 'EX',
+  },
+  {
+    code: 2,
+    isSelected: false,
+    label: 'VG',
+    name: 'VG',
+    order: 2,
+    synonyms: 'VG',
+  },
+  {
+    code: 3,
+    isSelected: false,
+    label: 'GD',
+    name: 'GD',
+    order: 3,
+    synonyms: 'GD',
+  },
+  {
+    code: 4,
+    isSelected: false,
+    label: 'FR',
+    name: 'FR',
+    order: 4,
+    synonyms: 'FR',
+  },
+];
+export const tempPol_list = [
+  {
+    code: 1,
+    isSelected: false,
+    label: 'EX',
+    name: 'EX',
+    order: 1,
+    synonyms: 'EX',
+  },
+  {
+    code: 2,
+    isSelected: false,
+    label: 'VG',
+    name: 'VG',
+    order: 2,
+    synonyms: 'VG',
+  },
+  {
+    code: 3,
+    isSelected: false,
+    label: 'GD',
+    name: 'GD',
+    order: 3,
+    synonyms: 'GD',
+  },
+  {
+    code: 4,
+    isSelected: false,
+    label: 'FR',
+    name: 'FR',
+    order: 4,
+    synonyms: 'FR',
+  },
+];
+export const tempFlor_list = [
+  {
+    code: 1,
+    isSelected: false,
+    label: 'NONE',
+    name: 'NONE',
+    order: 1,
+    synonyms: 'NONE',
+  },
+  {
+    code: 2,
+    isSelected: false,
+    label: 'FAIN',
+    name: 'FAIN',
+    order: 2,
+    synonyms: 'FAIN',
+  },
+  {
+    code: 3,
+    isSelected: false,
+    label: 'MED',
+    name: 'MED',
+    order: 3,
+    synonyms: 'MED',
+  },
+  {
+    code: 4,
+    isSelected: false,
+    label: 'STG',
+    name: 'STG',
+    order: 4,
+    synonyms: 'STG',
+  },
+  {
+    code: 5,
+    isSelected: false,
+    label: 'VSTG',
+    name: 'VSTG',
+    order: 5,
+    synonyms: 'VSTG',
   },
 ];

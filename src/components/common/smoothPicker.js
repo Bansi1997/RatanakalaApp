@@ -52,8 +52,6 @@ const ItemToRender = ({item, index}, indexSelected, width) => {
   }
   return (
     <>
-      {console.log('item name', item.name)}
-
       <Item
         opacity={opacity}
         selected={selected}
@@ -64,13 +62,6 @@ const ItemToRender = ({item, index}, indexSelected, width) => {
 };
 const SmoothPickerDropDown = ({data, selectedData, index}) => {
   let defaultIndex = index;
-  // data && data[0].length >= 4
-  //   ? 0
-  //   : data[0].length === 1
-  //   ? 3
-  //   : data[0].length >= 2
-  //   ? 3
-  //   : 3;
   const [selected, setSelected] = useState(defaultIndex);
   const handleChange = index => {
     setSelected(index);
@@ -102,14 +93,10 @@ const SmoothPickerDropDown = ({data, selectedData, index}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   wrapperVertical: {
     justifyContent: 'center',
     alignItems: 'flex-start',
-    //paddingVertical: hp(1),
-    //paddingHorizontal: hp(0.5),
   },
   OptionWrapper: {
     justifyContent: 'center',

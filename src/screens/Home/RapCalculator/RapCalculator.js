@@ -57,14 +57,9 @@ const RapCalculator = ({navigation}) => {
           }
         />
         <Line />
-
-        <BottomButton
-          buttonTitle={'Search'}
-          onButtonPress={onPressSearchButton}
-        />
       </View>
-      {/* ........................modal................. */}
-      <Model show={showBottomSheet} height={290}>
+      {/* ........................modal................. 290 */}
+      <Model show={showBottomSheet} height={520}>
         <View style={styles.bottomSheetContent}>
           <CommonHeader
             leftComponent={
