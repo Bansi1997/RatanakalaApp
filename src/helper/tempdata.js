@@ -535,3 +535,41 @@ export const tempFlor_list = [
     synonyms: 'VSTG',
   },
 ];
+export const tempRapCalc_list = [
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+  {
+    shape: 'Round',
+  },
+];

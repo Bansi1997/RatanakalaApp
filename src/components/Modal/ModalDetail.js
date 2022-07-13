@@ -17,7 +17,7 @@ import {
 } from '../../helper/tempdata';
 import InputText from '../../components/common/TextInput';
 
-const ModalDetail = () => {
+const ModalDetail = ({isShowModal}) => {
   //shape List.................
   const [shapes_list, setShapes_list] = useState(tempShapeslist);
   const [shapeSelectedValue, setShapeSelectedValue] = useState(shapes_list[1]);
@@ -214,6 +214,7 @@ const ModalDetail = () => {
               marginHorizontal: wp(3),
             }}
             onPress={() => {
+              isShowModal();
               console.log('Show data');
             }}>
             <Text style={styles.buttonText}>{'Show'}</Text>
@@ -260,8 +261,8 @@ const styles = StyleSheet.create({
     fontFamily: fontFamily.exo_bold,
     color: Color.primary,
     //alignSelf: 'flex-start',
-    marginRight: wp(3),
-    paddingTop: hp(0.3),
+    marginHorizontal: wp(2),
+    paddingVertical: hp(0.1),
   },
 });
 export default ModalDetail;
