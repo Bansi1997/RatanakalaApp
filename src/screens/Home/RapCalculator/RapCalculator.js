@@ -44,7 +44,6 @@ const RapCalculator = ({navigation}) => {
     return (
       <View style={styles.swipeWrapper}>
         <TouchableOpacity
-          activeOpacity={1}
           onPress={() => {
             console.log('copy item');
           }}>
@@ -53,7 +52,6 @@ const RapCalculator = ({navigation}) => {
           </View>
         </TouchableOpacity>
         <TouchableOpacity
-          activeOpacity={1}
           onPress={() => {
             console.log('Delete item');
           }}>
@@ -222,9 +220,123 @@ const RapCalculator = ({navigation}) => {
                     onPress={() => setShowBottomSheet(true)}
                     style={styles.listItem}
                     underlayColor={'#AAA'}>
-                    <View style={{flexDirection: 'row'}}>
-                      <Text>{item?.shape}</Text>
-                    </View>
+                    <>
+                      <View style={styles.listSubItemWrapper}>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>
+                            {'shape'}
+                          </Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>
+                            {'Color'}
+                          </Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>{'Qty'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>{'Cut'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>
+                            {'Polish'}
+                          </Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>{'Sym'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>{'Flor'}</Text>
+                        </View>
+                      </View>
+                      <View
+                        style={[
+                          styles.listSubItemWrapper,
+                          {marginTop: hp(0.2)},
+                        ]}>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'Round'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'D'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'VSI'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'EX'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'EX'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'EX'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'NONE'}</Text>
+                        </View>
+                      </View>
+                      <View
+                        style={[styles.listSubItemWrapper, {marginTop: hp(1)}]}>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>
+                            {'Carat'}
+                          </Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>
+                            {'O.Rate'}
+                          </Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>
+                            {'Dis %'}
+                          </Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>{'Rate'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>
+                            {'Amount'}
+                          </Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>{'Type'}</Text>
+                        </View>
+                        {/* <View style={styles.subItem}>
+                          <Text style={styles.listItemTitleText}>{''}</Text>
+                        </View> */}
+                      </View>
+                      <View
+                        style={[
+                          styles.listSubItemWrapper,
+                          {marginTop: hp(0.2)},
+                        ]}>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'0.51'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'2000'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'0.00'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'2000'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'1020'}</Text>
+                        </View>
+                        <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'GTA'}</Text>
+                        </View>
+                        {/* <View style={styles.subItem}>
+                          <Text style={styles.listItemText}>{'NONE'}</Text>
+                        </View> */}
+                      </View>
+                    </>
                   </TouchableHighlight>
                 );
               }}
@@ -393,8 +505,8 @@ const styles = StyleSheet.create({
   //swipe list ...
   listWrapper: {marginHorizontal: wp(3), marginVertical: hp(5)},
   listItem: {
-    paddingHorizontal: wp(5),
-    paddingVertical: hp(2),
+    paddingHorizontal: wp(2),
+    paddingVertical: hp(1.5),
     borderBottomWidth: 3,
     borderColor: Color.secondaryBackground,
     backgroundColor: Color.background,
@@ -426,6 +538,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-end',
     marginVertical: hp(1),
+  },
+  listItemTitleText: {
+    fontSize: fontSize.font12,
+    fontFamily: fontFamily.exo_regular,
+    color: Color.authMainTitleText,
+    fontWeight: 'bold',
+  },
+  subItem: {flex: 1, alignItems: 'center'},
+  listSubItemWrapper: {flexDirection: 'row'},
+  listItemText: {
+    fontSize: fontSize.font12,
+    fontFamily: fontFamily.exo_regular,
+    color: 'black',
   },
 });
 export default RapCalculator;
